@@ -1,6 +1,8 @@
 import java.util.*;
 public class Bank {
     public static void main(String[] args) {
+        BankAccount obj=new BankAccount("Harsh","CCV");
+        obj.show();
 
     }
 }
@@ -44,8 +46,8 @@ class BankAccount{
     void show(){
         char option='\0';
         Scanner sc=new Scanner(System.in);
-        System.out.println("Welcome" +customername);
-        System.out.println("Your id is"+customerid);
+        System.out.println("Welcome:" +customername);
+        System.out.println("Your id is :"+customerid);
         System.out.println(("\n"));
         System.out.println("A.Check Balance");
         System.out.println("B.Deposit");
@@ -81,10 +83,34 @@ class BankAccount{
                 case 'C':
                     System.out.println("***********************");
                     System.out.println("Enter an amount to withdraw");
-                    System.out.println();
-            }
+                    System.out.println("*******************************");
+                    int amount2=sc.nextInt();
+                    withdrawl(amount2);
+                    System.out.println("\n");
+                    break;
 
+                case 'D':
+                    System.out.println("*******************************");
+                    getprevioustransaction();;
+                    System.out.println("*********************************");
+                    System.out.println(("\n"));
+                    break;
+
+                case 'E':
+                    System.out.println("****************************");
+                    break;
+
+                    default:
+                        System.out.println("Invalid Option ! Please enter again");
+                        break;
+            }
         }
+
+        //termination for
+        while (option!='E');
+        System.out.println("ThankYou for using our services ");
+        System.out.println("Please do come again");
+
 
     }
 }
