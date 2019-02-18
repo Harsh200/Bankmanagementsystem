@@ -81,6 +81,7 @@ class BankAccount{
                 case 'C':
                     System.out.println("***********************");
                     System.out.println("Enter an amount to withdraw");
+                    System.out.println();
             }
 
         }
