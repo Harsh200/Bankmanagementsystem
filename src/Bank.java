@@ -1,7 +1,13 @@
 import java.util.*;
+//This is a main methid for program
 public class Bank {
     public static void main(String[] args) {
-        BankAccount obj=new BankAccount("Harsh","CCV");
+        Scanner scanner=new Scanner(System.in);
+        System.out.println(("Please Enter Name and id"));
+        String name=scanner.nextLine();
+        String id=scanner.nextLine();
+
+        BankAccount obj=new BankAccount(name,id);
         obj.show();
 
     }
